@@ -1,0 +1,148 @@
+@font-face{
+  font-family:'DancingScript-Regular';
+  src:url('DancingScript-Regular.otf');
+}
+
+body{
+  background-color: black;
+  font-family:'DancingScript-Regular';  
+  color:#FFF;
+}
+
+#contenido{
+  width:900px;
+  margin:0 auto;
+  animation:entrada 2s;
+}
+
+@-webkit-keyframes entrada{
+ 0%{margin-top:150%;}
+ 60%{margin-top:-5%;}
+ 100%{margin-top:0%;}
+
+}
+
+
+#cabecera{
+  height:100px;
+  background-color: #5b7989;
+  border-radius:10px 10px 0px 0px;  
+}
+#nombre{
+  font-family: 'DancingScript-Regular';
+  color:#FFF;
+  text-shadow:2px 2px 3px #02010a;
+  float:left;
+}
+#menu{
+   float:right;
+   margin:25px 25px 0 0;   
+}
+#menu p{
+ font-size:20;
+}
+a{
+  width:60px;
+}
+a:visited{
+  color:#FFF;
+}
+
+
+#imgCentral{
+ background-color: #82c3a6;
+ height:60%;
+ text-align: center;
+}
+#imgCentral img{
+ width:70%;
+ height:10%; 
+ margin:1% 1%;
+ border:2px solid black;
+ box-shadow:2px 2px 2px 0 #82c3a6;
+}
+
+
+#imgSecundaria{
+ background-color: #d5c75f;
+ height:50%;
+ border:1px;
+ display:flex;
+ flex-flow:row wrap;
+}
+.foto{
+  width:45%;
+  height:80%;
+  margin:20px;
+  color:black;
+  text-decoration:underline;
+  flex-grow:1;
+}
+img[class*="foto"]{ 
+  width:90%;
+  height:300px;
+  border:2px solid black;
+  box-shadow:2px 2px 2px 0 #82c3a6;
+}
+.foto1:hover{
+  transform:rotate(10deg);
+}
+.foto2:hover{
+  transform:translate(20px,-5px);
+}
+
+
+footer{
+ background-color: #C6d5c5;
+ height:150px;
+ border-radius:0px 0px 10px 10px;
+ display:flex;
+ flex-flow:row wrap;
+}
+.pie{
+  color:black;
+  flex:1 1 24%;
+  height:80%;
+  background-color: #C6d5c5;
+  margin:4px;
+}
+
+@media screen and (max-width: 900px){
+  #contenido{
+    width: 100%;
+  } 
+
+  #cabecera{
+    text-align:center;
+    width: 100%;
+    height:150px;
+    display:flex;
+    flex-flow:column;    
+  }
+  #nombre{
+    width:100%;
+  }
+  #menu{
+    width:100%;
+    margin:0;
+  }
+
+  #imgSecundaria{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .foto{ 
+    width:100%;
+    margin:20px;
+  }
+
+  footer{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .pie{
+    width: 100%;
+    flex:1 1 100%;
+  }
+
+}
