@@ -47,6 +47,9 @@ a{
 a:visited{
   color:#FFF;
 }
+a:link{
+  color:#FFF;
+}
 
 
 #imgCentral{
@@ -94,18 +97,45 @@ img[class*="foto"]{
 
 footer{
  background-color: #C6d5c5;
- height:150px;
+ height:170px;
  border-radius:0px 0px 10px 10px;
  display:flex;
  flex-flow:row wrap;
 }
-.pie{
+div[class*="pie"]{
   color:black;
   flex:1 1 24%;
-  height:80%;
-  background-color: #C6d5c5;
   margin:4px;
+
 }
+
+#galeria{
+ background-color: #d5c75f;
+ height:50%;
+ border:1px;
+ display:flex;
+ flex-flow:row wrap;
+}
+img[class*="retrato"]{ 
+  height:50%;
+  border:2px solid black;
+  box-shadow:2px 2px 2px 0 #82c3a6;
+  margin:20px;
+  flex:1 3 25%;
+}
+.retratopar{
+ -webkit-filter:grayscale(100%);
+ filter:grayscale(100%);
+}
+.retrato1{
+ -webkit-filter:blur(10px);
+ filter:blur(10px);
+}
+.retrato3{
+ -webkit-filter:sepia(90%);
+ filter:sepia(90%);
+}
+
 
 @media screen and (max-width: 900px){
   #contenido{
@@ -138,11 +168,23 @@ footer{
 
   footer{
     width: 100%;
+    height:630px;
     margin: 0 auto;
   }
-  .pie{
+  div[class*="pie"]{
     width: 100%;
+    margin:0 4px;
     flex:1 1 100%;
   }
+
+ #galeria{
+    width: 100%;  
+  }
+  img[class*="retrato"]{ 
+   width:100%;
+   flex:1 1 100%;
+  }
+
+
 
 }
